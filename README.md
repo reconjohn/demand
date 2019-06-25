@@ -1,6 +1,33 @@
 ## R package: demand
 
-This package creates diverse plots per day, weekday, month and year for peak demand power consumption of several meters to support the [project, demand_acep](https://github.com/demand-consults/demand_acep), which was developed to make raw data ready to use for the further analyses. These plots lead to benefit-cost analyses and cost saving plots. In addition, this package forecasts peak power demand using ARIMA on a daily and monthly basis. Correlation and a simple regression are also included. 
+This package creates diverse plots per day, weekday, month and year for peak demand power consumption of several meters to support a [project, demand_acep](https://github.com/demand-consults/demand_acep), which was developed to make raw data ready to use for the further analyses. These plots lead to benefit-cost analyses and cost saving plots. In addition, this package forecasts peak power demand using ARIMA on a daily and monthly basis. Correlation and a simple regression are also included. 
+
+To use ths package, follow the steps:
+
+1. Install `devtools`
+```
+install.packages("devtools")
+```
+
+2. Load the package 
+```
+library(devtools)
+```
+
+3. Install this package `demand`
+```
+install_github("reconjohn/demand")
+```
+
+3. Load the package 
+```
+library(demand)
+```
+
+Now you are all set!
+
+
+## Examples are as follows: 
 
 ### Peak demand (kW) plot of day per month
 ![](./scripts/plots_files/figure-html/unnamed-chunk-1-1.png)
