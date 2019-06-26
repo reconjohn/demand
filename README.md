@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/reconjohn/demand/master)
+
 ## R package: demand
 
 This package creates diverse plots per day, weekday, month and year for peak demand power consumption of several meters to support a [project, demand_acep](https://github.com/demand-consults/demand_acep), which was developed to make raw data of electricity consumption of 4 meters in Poker Flat Research Range (PRFR) ready to use for the further analyses. These plots lead to benefit-cost analyses and cost saving plots based on [electricity rate structure from GVEA](http://www.gvea.com/rates/rates) in Alaska. 
