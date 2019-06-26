@@ -1,0 +1,8 @@
+install.packages('dplyr')
+install.packages('devtools')
+install.packages('readr')
+install.packages('tidyr')
+install.packages('ggplot2')
+install.packages('stringr')
+install.packages('kableExtra')
+install.packages('forecast')
