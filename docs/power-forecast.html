@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Power Forecast | Demand Charge and Forecasts</title>
+  <meta name="description" content="3 Power Forecast | Demand Charge and Forecasts" />
+  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Power Forecast | Demand Charge and Forecasts" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Power Forecast | Demand Charge and Forecasts" />
+  
+  
+  
+
+<meta name="author" content="Yohan Min" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="plot.html">
+<link rel="next" href="demand-charge-analysis.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Executive Summary</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#brief-description-of-demand-charge-using-r-package-demand"><i class="fa fa-check"></i><b>1.1</b> Brief description of demand charge using R package, <code>demand</code></a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="plot.html"><a href="plot.html"><i class="fa fa-check"></i><b>2</b> Demand Charge Power (kW) Plots</a><ul>
+<li class="chapter" data-level="2.1" data-path="plot.html"><a href="plot.html#pq"><i class="fa fa-check"></i><b>2.1</b> PQ</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-days-day-1-to-day-31-per-month"><i class="fa fa-check"></i><b>2.1.1</b> Power (kW) trend of a day for days (Day 1 to Day 31) per month</a></li>
+<li class="chapter" data-level="2.1.2" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-weekdays-sunday-to-saturday-per-month"><i class="fa fa-check"></i><b>2.1.2</b> Power (kW) trend of a day for weekdays (Sunday to Saturday) per month</a></li>
+<li class="chapter" data-level="2.1.3" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-months-jan.-to-dec.-per-year"><i class="fa fa-check"></i><b>2.1.3</b> Power (kW) trend of a day for months (Jan. to Dec.) per year</a></li>
+<li class="chapter" data-level="2.1.4" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-month-for-months-jan.-to-dec.-per-year"><i class="fa fa-check"></i><b>2.1.4</b> Power (kW) trend of a month for months (Jan. to Dec.) per year</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="plot.html"><a href="plot.html#wat-1"><i class="fa fa-check"></i><b>2.2</b> Wat 1</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-days-day-1-to-day-31-per-month-1"><i class="fa fa-check"></i><b>2.2.1</b> Power (kW) trend of a day for days (Day 1 to Day 31) per month</a></li>
+<li class="chapter" data-level="2.2.2" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-weekdays-sunday-to-saturday-per-month-1"><i class="fa fa-check"></i><b>2.2.2</b> Power (kW) trend of a day for weekdays (Sunday to Saturday) per month</a></li>
+<li class="chapter" data-level="2.2.3" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-months-jan.-to-dec.-per-year-1"><i class="fa fa-check"></i><b>2.2.3</b> Power (kW) trend of a day for months (Jan. to Dec.) per year</a></li>
+<li class="chapter" data-level="2.2.4" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-month-for-months-jan.-to-dec.-per-year-1"><i class="fa fa-check"></i><b>2.2.4</b> Power (kW) trend of a month for months (Jan. to Dec.) per year</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="plot.html"><a href="plot.html#wat-2"><i class="fa fa-check"></i><b>2.3</b> Wat 2</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-days-day-1-to-day-31-per-month-2"><i class="fa fa-check"></i><b>2.3.1</b> Power (kW) trend of a day for days (Day 1 to Day 31) per month</a></li>
+<li class="chapter" data-level="2.3.2" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-weekdays-sunday-to-saturday-per-month-2"><i class="fa fa-check"></i><b>2.3.2</b> Power (kW) trend of a day for weekdays (Sunday to Saturday) per month</a></li>
+<li class="chapter" data-level="2.3.3" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-months-jan.-to-dec.-per-year-2"><i class="fa fa-check"></i><b>2.3.3</b> Power (kW) trend of a day for months (Jan. to Dec.) per year</a></li>
+<li class="chapter" data-level="2.3.4" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-month-for-months-jan.-to-dec.-per-year-2"><i class="fa fa-check"></i><b>2.3.4</b> Power (kW) trend of a month for months (Jan. to Dec.) per year</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="plot.html"><a href="plot.html#wat-3"><i class="fa fa-check"></i><b>2.4</b> Wat 3</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-days-day-1-to-day-31-per-month-3"><i class="fa fa-check"></i><b>2.4.1</b> Power (kW) trend of a day for days (Day 1 to Day 31) per month</a></li>
+<li class="chapter" data-level="2.4.2" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-weekdays-sunday-to-saturday-per-month-3"><i class="fa fa-check"></i><b>2.4.2</b> Power (kW) trend of a day for weekdays (Sunday to Saturday) per month</a></li>
+<li class="chapter" data-level="2.4.3" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-months-jan.-to-dec.-per-year-3"><i class="fa fa-check"></i><b>2.4.3</b> Power (kW) trend of a day for months (Jan. to Dec.) per year</a></li>
+<li class="chapter" data-level="2.4.4" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-month-for-months-jan.-to-dec.-per-year-3"><i class="fa fa-check"></i><b>2.4.4</b> Power (kW) trend of a month for months (Jan. to Dec.) per year</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="power-forecast.html"><a href="power-forecast.html"><i class="fa fa-check"></i><b>3</b> Power Forecast</a><ul>
+<li class="chapter" data-level="3.1" data-path="power-forecast.html"><a href="power-forecast.html#power-kw-for-demand-charge-correlation"><i class="fa fa-check"></i><b>3.1</b> Power (kW) for demand charge correlation</a></li>
+<li class="chapter" data-level="3.2" data-path="power-forecast.html"><a href="power-forecast.html#past-3-years-power-trends-of-each-meter-nov.-2017-to-apr.-2019"><i class="fa fa-check"></i><b>3.2</b> Past 3 years power trends of each meter (Nov. 2017 to Apr. 2019)</a></li>
+<li class="chapter" data-level="3.3" data-path="power-forecast.html"><a href="power-forecast.html#forecast-based-on-month"><i class="fa fa-check"></i><b>3.3</b> Forecast based on month</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="power-forecast.html"><a href="power-forecast.html#pq-1"><i class="fa fa-check"></i><b>3.3.1</b> PQ</a></li>
+<li class="chapter" data-level="3.3.2" data-path="power-forecast.html"><a href="power-forecast.html#wat1"><i class="fa fa-check"></i><b>3.3.2</b> Wat1</a></li>
+<li class="chapter" data-level="3.3.3" data-path="power-forecast.html"><a href="power-forecast.html#wat2"><i class="fa fa-check"></i><b>3.3.3</b> Wat2</a></li>
+<li class="chapter" data-level="3.3.4" data-path="power-forecast.html"><a href="power-forecast.html#wat3"><i class="fa fa-check"></i><b>3.3.4</b> Wat3</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="power-forecast.html"><a href="power-forecast.html#forecast-based-on-day"><i class="fa fa-check"></i><b>3.4</b> Forecast based on day</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="power-forecast.html"><a href="power-forecast.html#pq-2"><i class="fa fa-check"></i><b>3.4.1</b> PQ</a></li>
+<li class="chapter" data-level="3.4.2" data-path="power-forecast.html"><a href="power-forecast.html#wat1-1"><i class="fa fa-check"></i><b>3.4.2</b> Wat1</a></li>
+<li class="chapter" data-level="3.4.3" data-path="power-forecast.html"><a href="power-forecast.html#wat2-1"><i class="fa fa-check"></i><b>3.4.3</b> Wat2</a></li>
+<li class="chapter" data-level="3.4.4" data-path="power-forecast.html"><a href="power-forecast.html#wat3-1"><i class="fa fa-check"></i><b>3.4.4</b> Wat3</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="demand-charge-analysis.html"><a href="demand-charge-analysis.html"><i class="fa fa-check"></i><b>4</b> Demand Charge Analysis</a><ul>
+<li class="chapter" data-level="4.1" data-path="demand-charge-analysis.html"><a href="demand-charge-analysis.html#total-aggregated-power-kw-for-demand-charge-based-on-month"><i class="fa fa-check"></i><b>4.1</b> Total aggregated power (kW) for demand charge based on month</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="demand-charge-analysis.html"><a href="demand-charge-analysis.html#montly-maximum-peak-powerkw-trend-4"><i class="fa fa-check"></i><b>4.1.1</b> Montly maximum peak power(kW) trend</a></li>
+<li class="chapter" data-level="4.1.2" data-path="demand-charge-analysis.html"><a href="demand-charge-analysis.html#density-of-maximum-peak-power-kw-8"><i class="fa fa-check"></i><b>4.1.2</b> Density of maximum peak power (kW)</a></li>
+<li class="chapter" data-level="4.1.3" data-path="demand-charge-analysis.html"><a href="demand-charge-analysis.html#prediction-performance-for-the-last-3-months-4"><i class="fa fa-check"></i><b>4.1.3</b> Prediction performance for the last 3 months</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="demand-charge-analysis.html"><a href="demand-charge-analysis.html#benefit-cost-analysis-of-involving-a-virtual-meter"><i class="fa fa-check"></i><b>4.2</b> Benefit-cost analysis of involving a virtual meter</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Demand Charge and Forecasts</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="power-forecast" class="section level1">
+<h1><span class="header-section-number">3</span> Power Forecast</h1>
+<div id="power-kw-for-demand-charge-correlation" class="section level2">
+<h2><span class="header-section-number">3.1</span> Power (kW) for demand charge correlation</h2>
+<p>These 4 meters have power (kW) correlated each other for the past 3 years. The correlations are various depending upon the comparisons. In general, power in <code>PQ</code> meter is mostly correlated with power in <code>Wat3</code>. This founding is interesting as the more correlated, the more dependency resulting in less effective to address load reduction of having a virtual meter, are expected.</p>
+<p><img src="books_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+</div>
+<div id="past-3-years-power-trends-of-each-meter-nov.-2017-to-apr.-2019" class="section level2">
+<h2><span class="header-section-number">3.2</span> Past 3 years power trends of each meter (Nov. 2017 to Apr. 2019)</h2>
+<p>Variances of power (kW) for each meter, verify the correlations found in the previous correlation plot.</p>
+<p><img src="books_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p>A regression model for power of <code>PQ</code> shows <code>Wat3</code> is the most significant followed by <code>Wat2</code> resulting in 0.72 in adjusted R-squared. They are higly correlated.</p>
+<table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-21">Table 3.1: </span>PQ power (kW) regression in Wat1, Wat2 and Wat3
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+term
+</th>
+<th style="text-align:right;">
+estimate
+</th>
+<th style="text-align:right;">
+std.error
+</th>
+<th style="text-align:right;">
+statistic
+</th>
+<th style="text-align:right;">
+p.value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+15.73
+</td>
+<td style="text-align:right;">
+0.38
+</td>
+<td style="text-align:right;">
+41.94
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Wat1
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+3.37
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Wat2
+</td>
+<td style="text-align:right;">
+2.02
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:right;">
+131.52
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Wat3
+</td>
+<td style="text-align:right;">
+1.34
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+231.90
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="forecast-based-on-month" class="section level2">
+<h2><span class="header-section-number">3.3</span> Forecast based on month</h2>
+<p>Using ARIMA, power trends of each meter were forecasted based on month, which is the billing cycle for demand charge. The power trends were plotted with maximum value of the peack power during the month because the peak power decides the billing cost.</p>
+<div id="pq-1" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> PQ</h3>
+<p>It was expected that power for PQ would be around 125 kW for the last 3 months and the real values for these months were 114, 107, and 131 kW respectively.</p>
+<div id="montly-maximum-peak-powerkw-trend" class="section level4">
+<h4><span class="header-section-number">3.3.1.1</span> Montly maximum peak power(kW) trend</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+</div>
+<div id="density-of-maximum-peak-power-kw" class="section level4">
+<h4><span class="header-section-number">3.3.1.2</span> Density of maximum peak power (kW)</h4>
+<p>The density plot shows the distribution of the monthly peak power for each meter. For <code>PQ</code>, peak power around 125 kW is mostly prevalent, which means there is more probability that <code>PQ</code> peak power would be around 125 kW.</p>
+<p><img src="books_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+</div>
+<div id="prediction-performance-for-the-last-3-months" class="section level4">
+<h4><span class="header-section-number">3.3.1.3</span> Prediction performance for the last 3 months</h4>
+<p>ARIMA predicted the peak power for the last 3 months, which is February, March, and April given the previous peak power data from November, 2017 to January, 2019. Since there are 2 months missing (November and December of 2018), the months used for the prediction were 13 months. Given the historical data of 13 months, the model predicts the coming 3 months and it is quite accurate as around 125 kW compared to the real values for these months, 114, 107, and 131 kW respectively.</p>
+<p><img src="books_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+</div>
+</div>
+<div id="wat1" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Wat1</h3>
+<p>It was expected that power for Wat1 would be around 372 kW for the last 3 months and the real values for these months were 385, 377, and 370 kW respectively.</p>
+<div id="montly-maximum-peak-powerkw-trend-1" class="section level4">
+<h4><span class="header-section-number">3.3.2.1</span> Montly maximum peak power(kW) trend</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+</div>
+<div id="density-of-maximum-peak-power-kw-1" class="section level4">
+<h4><span class="header-section-number">3.3.2.2</span> Density of maximum peak power (kW)</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+</div>
+<div id="prediction-performance-for-the-last-3-months-1" class="section level4">
+<h4><span class="header-section-number">3.3.2.3</span> Prediction performance for the last 3 months</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+</div>
+</div>
+<div id="wat2" class="section level3">
+<h3><span class="header-section-number">3.3.3</span> Wat2</h3>
+<p>It was expected that power for Wat2 would be around 18 kW for the last 3 months and the real values for these months were 20, 19, and 17 kW respectively.</p>
+<div id="montly-maximum-peak-powerkw-trend-2" class="section level4">
+<h4><span class="header-section-number">3.3.3.1</span> Montly maximum peak power(kW) trend</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+</div>
+<div id="density-of-maximum-peak-power-kw-2" class="section level4">
+<h4><span class="header-section-number">3.3.3.2</span> Density of maximum peak power (kW)</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+</div>
+<div id="prediction-performance-for-the-last-3-months-2" class="section level4">
+<h4><span class="header-section-number">3.3.3.3</span> Prediction performance for the last 3 months</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+</div>
+</div>
+<div id="wat3" class="section level3">
+<h3><span class="header-section-number">3.3.4</span> Wat3</h3>
+<p>It was expected that power for Wat3 would be around 68 kW for the last 3 months and the real values for these months were 89, 52, and 85 kW respectively.</p>
+<div id="montly-maximum-peak-powerkw-trend-3" class="section level4">
+<h4><span class="header-section-number">3.3.4.1</span> Montly maximum peak power(kW) trend</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+</div>
+<div id="density-of-maximum-peak-power-kw-3" class="section level4">
+<h4><span class="header-section-number">3.3.4.2</span> Density of maximum peak power (kW)</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+</div>
+<div id="prediction-performance-for-the-last-3-months-3" class="section level4">
+<h4><span class="header-section-number">3.3.4.3</span> Prediction performance for the last 3 months</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="forecast-based-on-day" class="section level2">
+<h2><span class="header-section-number">3.4</span> Forecast based on day</h2>
+<p>For the comparison, forecastes based on day, were also plotted. The range between the upper and lower bound of forecast shows narrower than the one based on month.</p>
+<div id="pq-2" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> PQ</h3>
+<div id="daily-maximum-peak-powerkw-trend" class="section level4">
+<h4><span class="header-section-number">3.4.1.1</span> Daily maximum peak power(kW) trend</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+</div>
+<div id="density-of-maximum-peak-power-kw-4" class="section level4">
+<h4><span class="header-section-number">3.4.1.2</span> Density of maximum peak power (kW)</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+</div>
+<div id="prediction-performance-for-the-last-10-days" class="section level4">
+<h4><span class="header-section-number">3.4.1.3</span> Prediction performance for the last 10 days</h4>
+<p>There are total 413 days previously available since November 2017 till April 2019. Given the 404 days, rest of 10 days were predicted from 405th day to 413th day as below in the figure.</p>
+<p><img src="books_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+</div>
+</div>
+<div id="wat1-1" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> Wat1</h3>
+<div id="daily-maximum-peak-powerkw-trend-1" class="section level4">
+<h4><span class="header-section-number">3.4.2.1</span> Daily maximum peak power(kW) trend</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+</div>
+<div id="density-of-maximum-peak-power-kw-5" class="section level4">
+<h4><span class="header-section-number">3.4.2.2</span> Density of maximum peak power (kW)</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+</div>
+<div id="prediction-performance-for-the-last-10-days-1" class="section level4">
+<h4><span class="header-section-number">3.4.2.3</span> Prediction performance for the last 10 days</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+</div>
+</div>
+<div id="wat2-1" class="section level3">
+<h3><span class="header-section-number">3.4.3</span> Wat2</h3>
+<div id="daily-maximum-peak-powerkw-trend-2" class="section level4">
+<h4><span class="header-section-number">3.4.3.1</span> Daily maximum peak power(kW) trend</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+</div>
+<div id="density-of-maximum-peak-power-kw-6" class="section level4">
+<h4><span class="header-section-number">3.4.3.2</span> Density of maximum peak power (kW)</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+</div>
+<div id="prediction-performance-for-the-last-10-days-2" class="section level4">
+<h4><span class="header-section-number">3.4.3.3</span> Prediction performance for the last 10 days</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
+</div>
+</div>
+<div id="wat3-1" class="section level3">
+<h3><span class="header-section-number">3.4.4</span> Wat3</h3>
+<div id="daily-maximum-peak-powerkw-trend-3" class="section level4">
+<h4><span class="header-section-number">3.4.4.1</span> Daily maximum peak power(kW) trend</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
+</div>
+<div id="density-of-maximum-peak-power-kw-7" class="section level4">
+<h4><span class="header-section-number">3.4.4.2</span> Density of maximum peak power (kW)</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
+</div>
+<div id="prediction-performance-for-the-last-10-days-3" class="section level4">
+<h4><span class="header-section-number">3.4.4.3</span> Prediction performance for the last 10 days</h4>
+<p><img src="books_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="plot.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="demand-charge-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": false,
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": false
+});
+});
+</script>
+
+</body>
+
+</html>

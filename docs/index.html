@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Demand Charge and Forecasts</title>
+  <meta name="description" content="Demand Charge and Forecasts" />
+  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Demand Charge and Forecasts" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Demand Charge and Forecasts" />
+  
+  
+  
+
+<meta name="author" content="Yohan Min" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="plot.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Executive Summary</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#brief-description-of-demand-charge-using-r-package-demand"><i class="fa fa-check"></i><b>1.1</b> Brief description of demand charge using R package, <code>demand</code></a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="plot.html"><a href="plot.html"><i class="fa fa-check"></i><b>2</b> Demand Charge Power (kW) Plots</a><ul>
+<li class="chapter" data-level="2.1" data-path="plot.html"><a href="plot.html#pq"><i class="fa fa-check"></i><b>2.1</b> PQ</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-days-day-1-to-day-31-per-month"><i class="fa fa-check"></i><b>2.1.1</b> Power (kW) trend of a day for days (Day 1 to Day 31) per month</a></li>
+<li class="chapter" data-level="2.1.2" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-weekdays-sunday-to-saturday-per-month"><i class="fa fa-check"></i><b>2.1.2</b> Power (kW) trend of a day for weekdays (Sunday to Saturday) per month</a></li>
+<li class="chapter" data-level="2.1.3" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-months-jan.-to-dec.-per-year"><i class="fa fa-check"></i><b>2.1.3</b> Power (kW) trend of a day for months (Jan. to Dec.) per year</a></li>
+<li class="chapter" data-level="2.1.4" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-month-for-months-jan.-to-dec.-per-year"><i class="fa fa-check"></i><b>2.1.4</b> Power (kW) trend of a month for months (Jan. to Dec.) per year</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="plot.html"><a href="plot.html#wat-1"><i class="fa fa-check"></i><b>2.2</b> Wat 1</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-days-day-1-to-day-31-per-month-1"><i class="fa fa-check"></i><b>2.2.1</b> Power (kW) trend of a day for days (Day 1 to Day 31) per month</a></li>
+<li class="chapter" data-level="2.2.2" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-weekdays-sunday-to-saturday-per-month-1"><i class="fa fa-check"></i><b>2.2.2</b> Power (kW) trend of a day for weekdays (Sunday to Saturday) per month</a></li>
+<li class="chapter" data-level="2.2.3" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-months-jan.-to-dec.-per-year-1"><i class="fa fa-check"></i><b>2.2.3</b> Power (kW) trend of a day for months (Jan. to Dec.) per year</a></li>
+<li class="chapter" data-level="2.2.4" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-month-for-months-jan.-to-dec.-per-year-1"><i class="fa fa-check"></i><b>2.2.4</b> Power (kW) trend of a month for months (Jan. to Dec.) per year</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="plot.html"><a href="plot.html#wat-2"><i class="fa fa-check"></i><b>2.3</b> Wat 2</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-days-day-1-to-day-31-per-month-2"><i class="fa fa-check"></i><b>2.3.1</b> Power (kW) trend of a day for days (Day 1 to Day 31) per month</a></li>
+<li class="chapter" data-level="2.3.2" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-weekdays-sunday-to-saturday-per-month-2"><i class="fa fa-check"></i><b>2.3.2</b> Power (kW) trend of a day for weekdays (Sunday to Saturday) per month</a></li>
+<li class="chapter" data-level="2.3.3" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-months-jan.-to-dec.-per-year-2"><i class="fa fa-check"></i><b>2.3.3</b> Power (kW) trend of a day for months (Jan. to Dec.) per year</a></li>
+<li class="chapter" data-level="2.3.4" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-month-for-months-jan.-to-dec.-per-year-2"><i class="fa fa-check"></i><b>2.3.4</b> Power (kW) trend of a month for months (Jan. to Dec.) per year</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="plot.html"><a href="plot.html#wat-3"><i class="fa fa-check"></i><b>2.4</b> Wat 3</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-days-day-1-to-day-31-per-month-3"><i class="fa fa-check"></i><b>2.4.1</b> Power (kW) trend of a day for days (Day 1 to Day 31) per month</a></li>
+<li class="chapter" data-level="2.4.2" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-weekdays-sunday-to-saturday-per-month-3"><i class="fa fa-check"></i><b>2.4.2</b> Power (kW) trend of a day for weekdays (Sunday to Saturday) per month</a></li>
+<li class="chapter" data-level="2.4.3" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-day-for-months-jan.-to-dec.-per-year-3"><i class="fa fa-check"></i><b>2.4.3</b> Power (kW) trend of a day for months (Jan. to Dec.) per year</a></li>
+<li class="chapter" data-level="2.4.4" data-path="plot.html"><a href="plot.html#power-kw-trend-of-a-month-for-months-jan.-to-dec.-per-year-3"><i class="fa fa-check"></i><b>2.4.4</b> Power (kW) trend of a month for months (Jan. to Dec.) per year</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="power-forecast.html"><a href="power-forecast.html"><i class="fa fa-check"></i><b>3</b> Power Forecast</a><ul>
+<li class="chapter" data-level="3.1" data-path="power-forecast.html"><a href="power-forecast.html#power-kw-for-demand-charge-correlation"><i class="fa fa-check"></i><b>3.1</b> Power (kW) for demand charge correlation</a></li>
+<li class="chapter" data-level="3.2" data-path="power-forecast.html"><a href="power-forecast.html#past-3-years-power-trends-of-each-meter-nov.-2017-to-apr.-2019"><i class="fa fa-check"></i><b>3.2</b> Past 3 years power trends of each meter (Nov. 2017 to Apr. 2019)</a></li>
+<li class="chapter" data-level="3.3" data-path="power-forecast.html"><a href="power-forecast.html#forecast-based-on-month"><i class="fa fa-check"></i><b>3.3</b> Forecast based on month</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="power-forecast.html"><a href="power-forecast.html#pq-1"><i class="fa fa-check"></i><b>3.3.1</b> PQ</a></li>
+<li class="chapter" data-level="3.3.2" data-path="power-forecast.html"><a href="power-forecast.html#wat1"><i class="fa fa-check"></i><b>3.3.2</b> Wat1</a></li>
+<li class="chapter" data-level="3.3.3" data-path="power-forecast.html"><a href="power-forecast.html#wat2"><i class="fa fa-check"></i><b>3.3.3</b> Wat2</a></li>
+<li class="chapter" data-level="3.3.4" data-path="power-forecast.html"><a href="power-forecast.html#wat3"><i class="fa fa-check"></i><b>3.3.4</b> Wat3</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="power-forecast.html"><a href="power-forecast.html#forecast-based-on-day"><i class="fa fa-check"></i><b>3.4</b> Forecast based on day</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="power-forecast.html"><a href="power-forecast.html#pq-2"><i class="fa fa-check"></i><b>3.4.1</b> PQ</a></li>
+<li class="chapter" data-level="3.4.2" data-path="power-forecast.html"><a href="power-forecast.html#wat1-1"><i class="fa fa-check"></i><b>3.4.2</b> Wat1</a></li>
+<li class="chapter" data-level="3.4.3" data-path="power-forecast.html"><a href="power-forecast.html#wat2-1"><i class="fa fa-check"></i><b>3.4.3</b> Wat2</a></li>
+<li class="chapter" data-level="3.4.4" data-path="power-forecast.html"><a href="power-forecast.html#wat3-1"><i class="fa fa-check"></i><b>3.4.4</b> Wat3</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="demand-charge-analysis.html"><a href="demand-charge-analysis.html"><i class="fa fa-check"></i><b>4</b> Demand Charge Analysis</a><ul>
+<li class="chapter" data-level="4.1" data-path="demand-charge-analysis.html"><a href="demand-charge-analysis.html#total-aggregated-power-kw-for-demand-charge-based-on-month"><i class="fa fa-check"></i><b>4.1</b> Total aggregated power (kW) for demand charge based on month</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="demand-charge-analysis.html"><a href="demand-charge-analysis.html#montly-maximum-peak-powerkw-trend-4"><i class="fa fa-check"></i><b>4.1.1</b> Montly maximum peak power(kW) trend</a></li>
+<li class="chapter" data-level="4.1.2" data-path="demand-charge-analysis.html"><a href="demand-charge-analysis.html#density-of-maximum-peak-power-kw-8"><i class="fa fa-check"></i><b>4.1.2</b> Density of maximum peak power (kW)</a></li>
+<li class="chapter" data-level="4.1.3" data-path="demand-charge-analysis.html"><a href="demand-charge-analysis.html#prediction-performance-for-the-last-3-months-4"><i class="fa fa-check"></i><b>4.1.3</b> Prediction performance for the last 3 months</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="demand-charge-analysis.html"><a href="demand-charge-analysis.html#benefit-cost-analysis-of-involving-a-virtual-meter"><i class="fa fa-check"></i><b>4.2</b> Benefit-cost analysis of involving a virtual meter</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Demand Charge and Forecasts</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Demand Charge and Forecasts</h1>
+<p class="author"><em>Yohan Min</em></p>
+<p class="date"><em>Updated 2019-07-29</em></p>
+</div>
+<div id="index" class="section level1">
+<h1><span class="header-section-number">1</span> Executive Summary</h1>
+<p>This package creates diverse plots per day, weekday, month and year for peak demand power consumption of several meters to support a <a href="https://github.com/demand-consults/demand_acep">project, demand_acep</a>, which was developed to make raw data of electricity consumption of 4 meters in Poker Flat Research Range (PRFR) ready to use for the further analyses. These plots lead to benefit-cost analyses and cost saving plots based on <a href="http://www.gvea.com/rates/rates">electricity rate structure from GVEA</a> in Alaska.</p>
+<blockquote>
+<p>Poker Flat Research Range (PFRR) is located about 40 miles North of Fairbanks, AK and serves as a sounding rocket launch facility and for other geophysical research activities. PFRR is operated by the University of Alaska Fairbanks (UAF) under contract with NASA.</p>
+</blockquote>
+<table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<caption>
+Rate schedule
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Service Type
+</th>
+<th style="text-align:right;">
+Customer Charge [$/month]
+</th>
+<th style="text-align:right;">
+Utility Charge [$/kWh]
+</th>
+<th style="text-align:right;">
+Fuel &amp; Purchased Power Charge [$/kWh]
+</th>
+<th style="text-align:right;">
+Demand Charge [$/kW]
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Residential
+</td>
+<td style="text-align:right;">
+17.5
+</td>
+<td style="text-align:right;">
+0.11631
+</td>
+<td style="text-align:right;">
+0.09207
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GS-1
+</td>
+<td style="text-align:right;">
+20.0
+</td>
+<td style="text-align:right;">
+0.11528
+</td>
+<td style="text-align:right;">
+0.09207
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GS-2(S)
+</td>
+<td style="text-align:right;">
+30.0
+</td>
+<td style="text-align:right;">
+0.06256
+</td>
+<td style="text-align:right;">
+0.09207
+</td>
+<td style="text-align:right;">
+14.29
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GS-2(P)
+</td>
+<td style="text-align:right;">
+30.0
+</td>
+<td style="text-align:right;">
+0.06256
+</td>
+<td style="text-align:right;">
+0.09207
+</td>
+<td style="text-align:right;">
+14.29
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GS-3
+</td>
+<td style="text-align:right;">
+295.0
+</td>
+<td style="text-align:right;">
+0.02940
+</td>
+<td style="text-align:right;">
+0.09207
+</td>
+<td style="text-align:right;">
+22.86
+</td>
+</tr>
+</tbody>
+</table>
+<p>In addition, this package forecasts peak power demand using ARIMA on a daily and monthly basis. Correlation and a simple regression are also included.</p>
+<p>To use ths package, follow the steps:</p>
+<ol style="list-style-type: decimal">
+<li>Install <code>devtools</code></li>
+</ol>
+<pre><code>install.packages(&quot;devtools&quot;)</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Load the package</li>
+</ol>
+<pre><code>library(devtools)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Install this package <code>demand</code></li>
+</ol>
+<pre><code>install_github(&quot;reconjohn/demand&quot;)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Load the package</li>
+</ol>
+<pre><code>library(demand)</code></pre>
+<p>Now you are all set!</p>
+<div id="brief-description-of-demand-charge-using-r-package-demand" class="section level2">
+<h2><span class="header-section-number">1.1</span> Brief description of demand charge using R package, <code>demand</code></h2>
+<p>Using R package <code>demand</code>, peak demand, correlation, forecast, and demand charge were plotted. Refer to the followings for more details about demonstration of code from <code>demand</code> package and its results.</p>
+<ul>
+<li><p>Peak demand plot for the 4 meters <a href="https://github.com/demand-consults/demand_acep/blob/master/demand/scripts/plots.md">here</a> and
+<a href="https://github.com/demand-consults/demand_acep/blob/master/demand/scripts/plots.Rmd">code</a></p></li>
+<li><p>Peak demand correlation and forecasts <a href="https://github.com/demand-consults/demand_acep/blob/master/demand/scripts/forecast.md">here</a> and
+<a href="https://github.com/demand-consults/demand_acep/blob/master/demand/scripts/forecast.Rmd">code</a></p></li>
+<li><p>Demand charge reduction by implementing a virtual meter <a href="https://github.com/demand-consults/demand_acep/blob/master/demand/scripts/charge_filled.md">here</a> and
+<a href="https://github.com/demand-consults/demand_acep/blob/master/demand/scripts/charge_filled.Rmd">code</a></p></li>
+</ul>
+<p>View the project <a href="https://github.com/demand-consults/demand_acep">here</a>.</p>
+<hr />
+<p>To the extent possible under law,
+<a href="https://github.com/reconjohn">Yohan Min</a>
+has waived all copyright and related or neighboring rights to
+“<a href="https://github.com/reconjohn/demand">R package demand</a>”.
+This work is published from the United States.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="plot.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": false,
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": false
+});
+});
+</script>
+
+</body>
+
+</html>
